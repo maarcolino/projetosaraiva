@@ -1,19 +1,19 @@
 {
   "name": "usuarios",
   "version": "1.0.0",
-  "description": "Projeto de Microserviço com nodejs e express",
+  "description": "Projeto de microserviço com nodejs e express",
   "main": "index.js",
   "scripts": {
-    "start": "bidenib ./src/index.js"
+
+    "start":"nodemon ./src/index.js"
   },
   "keywords": [
     "Microserviços",
-    "nodejs",
+    "ndejs",
     "express",
-    "bcrypt",
-    "\u001b[F"
+    "bcrypt"
   ],
-  "author": "\u001b[2~\u001b",
+  "author": "Enzo Marcolino",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
