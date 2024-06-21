@@ -57,7 +57,7 @@ router.put("/alterarfoto/:id", verificar, (req, res) => {
  
 })
 router.put("/alterarsenha/:id", (req, res) => {
-    insert_register(idusuario,date_time,1,`/alterarsenha/${req.params.id}`,remote_data.toString())
+    // insert_register(idusuario,date_time,1,`/alterarsenha/${req.params.id}`,remote_data.toString())
  
     let sh = req.body.senha
  
@@ -102,7 +102,7 @@ router.post("/login", (req, res) => {
     data.query("select * from usuario where nomeusuario=?",req.body.nomeusuario,(error,result)=>{
         console.log(result)
         if(error || result==[0]==null){
-            insert_register(0,date_time,1,"/login",remote_data.toString())
+            // insert_register(0,date_time,1,"/login",remote_data.toString())
             return res.status(400).send({msg:"Usuário ou senha incorreta"})
         }
         bcrypt.compare(sh,result[0].senha,(err,same)=>{
@@ -112,7 +112,7 @@ router.post("/login", (req, res) => {
             else if(same==false){
                 return res.status(400).send({msg:"Usuário ou senha incorreta"})
             } else {
-                insert_register(result[0].idusuario,date_time,1,"/login",remote_data.toString())
+                // insert_register(result[0].idusuario,date_time,1,"/login",remote_data.toString())
                 idusuario = result [0].idusuario
                 let token = jwt.sign(
                     {
